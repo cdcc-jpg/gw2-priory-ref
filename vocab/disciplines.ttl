@@ -8,7 +8,7 @@
 
 priory-ref:DisciplineScheme a skos:ConceptScheme ;
     skos:prefLabel "Guild Wars 2 Crafting Discipline Scheme"@en ;
-    rdfs:comment "Controlled vocabulary of crafting disciplines in Guild Wars 2 with max rating levels."@en ;
+    rdfs:comment "Controlled vocabulary of crafting disciplines in Guild Wars 2 with official API string identifiers and max skill ratings."@en ;
     skos:hasTopConcept discipline:Armorsmith, discipline:Artificer, discipline:Chef,
                        discipline:Huntsman, discipline:Jeweler, discipline:Leatherworker,
                        discipline:Scribe, discipline:Tailor, discipline:Weaponsmith .
@@ -17,6 +17,8 @@ discipline:Armorsmith a skos:Concept ;
     skos:inScheme priory-ref:DisciplineScheme ;
     skos:topConceptOf priory-ref:DisciplineScheme ;
     skos:prefLabel "Armorsmith"@en ;
+    skos:altLabel "Armorsmithing"@en, "Heavy Armor Crafting"@en ;
+    skos:definition "Crafting discipline that creates Heavy Armor, Runes, and metal gifts (Gift of Darkness)."@en ;
     skos:notation "Armorsmith" ;
     priory:maxRating 500 ;
     rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Armorsmith> .
@@ -25,6 +27,8 @@ discipline:Artificer a skos:Concept ;
     skos:inScheme priory-ref:DisciplineScheme ;
     skos:topConceptOf priory-ref:DisciplineScheme ;
     skos:prefLabel "Artificer"@en ;
+    skos:altLabel "Artificing"@en, "Magical Weapon Crafting"@en ;
+    skos:definition "Crafting discipline that creates Staves, Scepters, Foci, Tridents, and Sigils."@en ;
     skos:notation "Artificer" ;
     priory:maxRating 500 ;
     rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Artificer> .
@@ -33,6 +37,8 @@ discipline:Chef a skos:Concept ;
     skos:inScheme priory-ref:DisciplineScheme ;
     skos:topConceptOf priory-ref:DisciplineScheme ;
     skos:prefLabel "Chef"@en ;
+    skos:altLabel "Cooking"@en, "Food Crafting"@en ;
+    skos:definition "Crafting discipline that creates consumables, Ascended feasts, and dyes."@en ;
     skos:notation "Chef" ;
     priory:maxRating 500 ;
     rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Chef> .
@@ -41,6 +47,8 @@ discipline:Huntsman a skos:Concept ;
     skos:inScheme priory-ref:DisciplineScheme ;
     skos:topConceptOf priory-ref:DisciplineScheme ;
     skos:prefLabel "Huntsman"@en ;
+    skos:altLabel "Ranged Weapon Crafting"@en ;
+    skos:definition "Crafting discipline that creates Bows, Pistols, Rifles, Harpoon Guns, Torches, and Warhorns."@en ;
     skos:notation "Huntsman" ;
     priory:maxRating 500 ;
     rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Huntsman> .
@@ -49,6 +57,8 @@ discipline:Jeweler a skos:Concept ;
     skos:inScheme priory-ref:DisciplineScheme ;
     skos:topConceptOf priory-ref:DisciplineScheme ;
     skos:prefLabel "Jeweler"@en ;
+    skos:altLabel "Jewelry Crafting"@en, "Trinket Crafting"@en ;
+    skos:definition "Crafting discipline that creates Rings, Accessories, and Amulets up to Exotic tier."@en ;
     skos:notation "Jeweler" ;
     priory:maxRating 400 ;
     rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Jeweler> .
@@ -57,6 +67,8 @@ discipline:Leatherworker a skos:Concept ;
     skos:inScheme priory-ref:DisciplineScheme ;
     skos:topConceptOf priory-ref:DisciplineScheme ;
     skos:prefLabel "Leatherworker"@en ;
+    skos:altLabel "Leatherworking"@en, "Medium Armor Crafting"@en ;
+    skos:definition "Crafting discipline that creates Medium Armor and Runes."@en ;
     skos:notation "Leatherworker" ;
     priory:maxRating 500 ;
     rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Leatherworker> .
@@ -65,6 +77,8 @@ discipline:Scribe a skos:Concept ;
     skos:inScheme priory-ref:DisciplineScheme ;
     skos:topConceptOf priory-ref:DisciplineScheme ;
     skos:prefLabel "Scribe"@en ;
+    skos:altLabel "Scribing"@en, "Guild Hall Crafting"@en ;
+    skos:definition "Crafting discipline that creates guild hall decorations, schematics, and banners."@en ;
     skos:notation "Scribe" ;
     priory:maxRating 400 ;
     rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Scribe> .
@@ -73,6 +87,8 @@ discipline:Tailor a skos:Concept ;
     skos:inScheme priory-ref:DisciplineScheme ;
     skos:topConceptOf priory-ref:DisciplineScheme ;
     skos:prefLabel "Tailor"@en ;
+    skos:altLabel "Tailoring"@en, "Light Armor Crafting"@en ;
+    skos:definition "Crafting discipline that creates Light Armor and Runes."@en ;
     skos:notation "Tailor" ;
     priory:maxRating 500 ;
     rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Tailor> .
@@ -81,6 +97,8 @@ discipline:Weaponsmith a skos:Concept ;
     skos:inScheme priory-ref:DisciplineScheme ;
     skos:topConceptOf priory-ref:DisciplineScheme ;
     skos:prefLabel "Weaponsmith"@en ;
+    skos:altLabel "Weaponsmithing"@en, "Melee Weapon Crafting"@en ;
+    skos:definition "Crafting discipline that creates Greatswords, Swords, Axes, Daggers, Hammers, Maces, Shields, and Spears."@en ;
     skos:notation "Weaponsmith" ;
     priory:maxRating 500 ;
     rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Weaponsmith> .

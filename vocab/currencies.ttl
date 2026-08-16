@@ -2,12 +2,14 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix priory: <https://priory.gw2/def/> .
 @prefix priory-ref: <https://priory.gw2/ref/> .
 @prefix currency: <https://priory.gw2/ref/currency/> .
 
 currency:CurrencyScheme a skos:ConceptScheme ;
     rdfs:label "Guild Wars 2 Currency & Token Taxonomy"@en ;
     skos:prefLabel "GW2 Currencies"@en ;
+    rdfs:comment "Authoritative SKOS concept scheme mapping Guild Wars 2 wallet currencies and barter tokens to official API IDs and Wiki semantics."@en ;
     skos:hasTopConcept currency:Coin, currency:Karma, currency:SpiritShard,
                        currency:Laurel, currency:GuildCommendation,
                        currency:AstralAcclaim, currency:TalesOfDungeonDelving,
@@ -28,191 +30,274 @@ currency:Coin a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
     skos:prefLabel "Coin (Gold/Silver/Copper)"@en ;
-    skos:notation "1"^^xsd:integer .
+    skos:altLabel "Gold"@en, "Silver"@en, "Copper"@en, "Liquid Gold"@en ;
+    skos:definition "Primary liquid currency in Tyria used for trading post commerce and vendor exchanges."@en ;
+    skos:notation "1"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Coin> .
 
 currency:Karma a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
     skos:prefLabel "Karma"@en ;
-    skos:notation "2"^^xsd:integer .
+    skos:definition "Account-wide non-tradeable currency earned through dynamic events, hearts, and map metas."@en ;
+    skos:notation "2"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Karma> .
 
 currency:SpiritShard a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
     skos:prefLabel "Spirit Shard"@en ;
-    skos:notation "23"^^xsd:integer .
+    skos:altLabel "Shards"@en, "Skill Points"@en ;
+    skos:definition "Currency earned from level 80 experience used for Mystic Forge crafting with Miyani."@en ;
+    skos:notation "23"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Spirit_Shard> .
 
 currency:Laurel a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
     skos:prefLabel "Laurel"@en ;
-    skos:notation "3"^^xsd:integer .
+    skos:altLabel "Laurels"@en ;
+    skos:definition "Account-bound currency used to purchase Ascended gear, crafting bags, and recipes."@en ;
+    skos:notation "3"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Laurel> .
 
 currency:GuildCommendation a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
     skos:prefLabel "Guild Commendation"@en ;
-    skos:notation "4"^^xsd:integer .
+    skos:definition "Currency awarded for participating in weekly guild missions."@en ;
+    skos:notation "4"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Guild_Commendation> .
 
 currency:AstralAcclaim a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
     skos:prefLabel "Astral Acclaim"@en ;
-    skos:notation "68"^^xsd:integer .
+    skos:altLabel "AA"@en, "Vault Acclaim"@en ;
+    skos:definition "Wizard's Vault currency earned by completing daily, weekly, and special objectives."@en ;
+    skos:notation "68"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Astral_Acclaim> .
 
 # --- Dungeons & Fractals ---
 currency:TalesOfDungeonDelving a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
     skos:prefLabel "Tales of Dungeon Delving"@en ;
-    skos:notation "68"^^xsd:integer .
+    skos:altLabel "Dungeon Tokens"@en, "Tales"@en ;
+    skos:definition "Consolidated dungeon currency earned from all explorable dungeon paths."@en ;
+    skos:notation "68"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Tales_of_Dungeon_Delving> .
 
 currency:FractalRelic a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
     skos:prefLabel "Fractal Relic"@en ;
-    skos:notation "7"^^xsd:integer .
+    skos:altLabel "Relics"@en ;
+    skos:definition "Currency earned by completing Fractals of the Mists scales."@en ;
+    skos:notation "7"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Fractal_Relic> .
 
 currency:PristineFractalRelic a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
     skos:prefLabel "Pristine Fractal Relic"@en ;
-    skos:notation "24"^^xsd:integer .
+    skos:altLabel "Pristine Relics"@en ;
+    skos:definition "Currency earned from daily Fractal tier achievements, used to buy Ascended rings and equipment."@en ;
+    skos:notation "24"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Pristine_Fractal_Relic> .
 
 # --- Raids & Strike Missions ---
 currency:MagnetiteShard a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
     skos:prefLabel "Magnetite Shard"@en ;
-    skos:notation "28"^^xsd:integer .
+    skos:altLabel "Magnetite"@en ;
+    skos:definition "Raid currency earned from Heart of Thorns raid wings (Wings 1-4)."@en ;
+    skos:notation "28"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Magnetite_Shard> .
 
 currency:LegendaryInsight a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
-    skos:prefLabel "Legendary Insight (Raids)"@en ;
-    skos:notation "77302"^^xsd:integer . # Item token notation
+    skos:prefLabel "Legendary Insight"@en ;
+    skos:altLabel "LI"@en, "Insights"@en ;
+    skos:definition "Prestige raid and strike token required to craft Legendary Envoy Armor and Coalescence."@en ;
+    skos:notation "77302"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Legendary_Insight> .
 
 currency:GreenProphetShard a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
-    skos:prefLabel "Green Prophet Shard (EoD Strikes)"@en ;
-    skos:notation "59"^^xsd:integer .
+    skos:prefLabel "Green Prophet Shard"@en ;
+    skos:definition "Strike mission currency earned from End of Dragons and Secrets of the Obscure strikes."@en ;
+    skos:notation "59"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Green_Prophet_Shard> .
 
 currency:BlueProphetShard a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
-    skos:prefLabel "Blue Prophet Shard (IBS Strikes)"@en ;
-    skos:notation "53"^^xsd:integer .
+    skos:prefLabel "Blue Prophet Shard"@en ;
+    skos:definition "Strike mission currency earned from Icebrood Saga strikes."@en ;
+    skos:notation "53"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Blue_Prophet_Shard> .
 
 # --- Heart of Thorns & Provisioners ---
 currency:ProvisionerToken a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
     skos:prefLabel "Provisioner Token"@en ;
-    skos:notation "35"^^xsd:integer .
+    skos:altLabel "PT"@en, "Provisioners"@en ;
+    skos:definition "Time-gated barter token exchanged with Faction Provisioners for Gift of Craftsmanship."@en ;
+    skos:notation "35"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Provisioner_Token> .
 
 currency:AirshipPart a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
     skos:prefLabel "Airship Part"@en ;
-    skos:notation "19"^^xsd:integer .
+    skos:definition "Verdant Brink regional map currency."@en ;
+    skos:notation "19"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Airship_Part> .
 
 currency:LeyLineSpark a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
     skos:prefLabel "Ley Line Spark"@en ;
-    skos:notation "22"^^xsd:integer .
+    skos:definition "Tangled Depths regional map currency."@en ;
+    skos:notation "22"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Ley_Line_Spark> .
 
 currency:AuricDust a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
     skos:prefLabel "Auric Dust"@en ;
-    skos:notation "20"^^xsd:integer .
+    skos:definition "Auric Basin regional map currency."@en ;
+    skos:notation "20"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Auric_Dust> .
 
 currency:CrystallineOre a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
     skos:prefLabel "Crystalline Ore"@en ;
-    skos:notation "46682"^^xsd:integer .
+    skos:definition "Dragon's Stand regional map currency mined from Noxious Pods."@en ;
+    skos:notation "46682"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Crystalline_Ore> .
 
 # --- Path of Fire & Living World ---
 currency:TradeContract a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
     skos:prefLabel "Trade Contract"@en ;
-    skos:notation "45"^^xsd:integer .
+    skos:definition "Crystal Desert regional map currency earned from Path of Fire bounties and events."@en ;
+    skos:notation "45"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Trade_Contract> .
 
 currency:ElegyMosaic a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
     skos:prefLabel "Elegy Mosaic"@en ;
-    skos:notation "49"^^xsd:integer .
+    skos:definition "Legendary bounty currency in the Crystal Desert required for Funerary collections."@en ;
+    skos:notation "49"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Elegy_Mosaic> .
 
 currency:VolatileMagic a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
     skos:prefLabel "Volatile Magic"@en ;
-    skos:notation "45"^^xsd:integer .
+    skos:altLabel "VM"@en ;
+    skos:definition "Living World Season 4 unbound magical currency used to buy trophy shipments and materials."@en ;
+    skos:notation "45"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Volatile_Magic> .
 
 currency:UnboundMagic a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
     skos:prefLabel "Unbound Magic"@en ;
-    skos:notation "32"^^xsd:integer .
+    skos:altLabel "UM"@en ;
+    skos:definition "Living World Season 3 magical currency."@en ;
+    skos:notation "32"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Unbound_Magic> .
 
 # --- End of Dragons ---
 currency:ImperialFavor a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
     skos:prefLabel "Imperial Favor"@en ;
-    skos:notation "64"^^xsd:integer .
+    skos:altLabel "Canthan Favor"@en ;
+    skos:definition "Canthan regional currency earned from End of Dragons meta events."@en ;
+    skos:notation "64"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Imperial_Favor> .
 
 currency:ResearchNote a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
     skos:prefLabel "Research Note"@en ;
-    skos:notation "61"^^xsd:integer .
+    skos:altLabel "Notes"@en ;
+    skos:definition "Currency generated by salvaging crafted equipment with a Research Kit in Cantha."@en ;
+    skos:notation "61"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Research_Note> .
 
 # --- Secrets of the Obscure & Janthir (Rift Essences) ---
 currency:EssenceOfDespair a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
-    skos:prefLabel "Essence of Despair (Tier 1 Rifts)"@en ;
-    skos:notation "100078"^^xsd:integer .
+    skos:prefLabel "Essence of Despair"@en ;
+    skos:altLabel "T1 Essence"@en ;
+    skos:definition "Tier 1 Kryptis Rift essence used to craft Obsidian Legendary Armor."@en ;
+    skos:notation "100078"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Essence_of_Despair> .
 
 currency:EssenceOfGreed a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
-    skos:prefLabel "Essence of Greed (Tier 2 Rifts)"@en ;
-    skos:notation "100414"^^xsd:integer .
+    skos:prefLabel "Essence of Greed"@en ;
+    skos:altLabel "T2 Essence"@en ;
+    skos:definition "Tier 2 Kryptis Rift essence used to craft Obsidian Legendary Armor."@en ;
+    skos:notation "100414"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Essence_of_Greed> .
 
 currency:EssenceOfTriumph a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
-    skos:prefLabel "Essence of Triumph (Tier 3 Rifts)"@en ;
-    skos:notation "100055"^^xsd:integer .
+    skos:prefLabel "Essence of Triumph"@en ;
+    skos:altLabel "T3 Essence"@en ;
+    skos:definition "Tier 3 Kryptis Rift essence used to craft Obsidian Legendary Armor."@en ;
+    skos:notation "100055"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Essence_of_Triumph> .
 
 # --- Competitive (WvW & PvP) ---
 currency:WvWSkirmishClaimTicket a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
     skos:prefLabel "WvW Skirmish Claim Ticket"@en ;
-    skos:notation "36"^^xsd:integer .
+    skos:altLabel "Skirmish Tickets"@en, "Tickets"@en ;
+    skos:definition "WvW pip reward currency used for Legendary Conflux, Warbringer, and Mistforged armor."@en ;
+    skos:notation "36"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/WvW_Skirmish_Claim_Ticket> .
 
 currency:BadgeOfHonor a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
     skos:prefLabel "Badge of Honor"@en ;
-    skos:notation "15"^^xsd:integer .
+    skos:altLabel "Badges"@en ;
+    skos:definition "Core World vs World combat currency."@en ;
+    skos:notation "15"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Badge_of_Honor> .
 
 currency:PvPLeagueTicket a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
     skos:prefLabel "PvP League Ticket"@en ;
-    skos:notation "30"^^xsd:integer .
+    skos:altLabel "League Tickets"@en ;
+    skos:definition "Structured PvP league reward currency used to craft Legendary Transcendence and Ardent armor."@en ;
+    skos:notation "30"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/PvP_League_Ticket> .
 
 currency:PvPAscendedShard a skos:Concept ;
     skos:inScheme currency:CurrencyScheme ;
     skos:topConceptOf currency:CurrencyScheme ;
-    skos:prefLabel "Ascended Shard of Glory (PvP)"@en ;
-    skos:notation "33"^^xsd:integer .
+    skos:prefLabel "Ascended Shard of Glory"@en ;
+    skos:altLabel "Shards of Glory"@en ;
+    skos:definition "Competitive PvP currency earned from ranked season chests."@en ;
+    skos:notation "33"^^xsd:integer ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Ascended_Shard_of_Glory> .
