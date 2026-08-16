@@ -1,0 +1,93 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix priory-ref: <https://priory.gw2/ref/> .
+@prefix itemtype: <https://priory.gw2/ref/itemtype/> .
+
+priory-ref:ItemTypeScheme a skos:ConceptScheme ;
+    skos:prefLabel "Guild Wars 2 Item Type Scheme"@en ;
+    rdfs:comment "Controlled vocabulary of top-level item categories matching the ArenaNet API type definitions."@en ;
+    skos:hasTopConcept itemtype:Weapon, itemtype:Armor, itemtype:Trinket,
+                       itemtype:Back, itemtype:UpgradeComponent, itemtype:Consumable,
+                       itemtype:CraftingMaterial, itemtype:Container, itemtype:Gathering,
+                       itemtype:Gizmo, itemtype:Bag, itemtype:Trophy, itemtype:MiniPet, itemtype:JadeTechModule .
+
+itemtype:Weapon a skos:Concept ;
+    skos:inScheme priory-ref:ItemTypeScheme ;
+    skos:topConceptOf priory-ref:ItemTypeScheme ;
+    skos:prefLabel "Weapon"@en ;
+    skos:notation "Weapon" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Weapon> .
+
+itemtype:Armor a skos:Concept ;
+    skos:inScheme priory-ref:ItemTypeScheme ;
+    skos:topConceptOf priory-ref:ItemTypeScheme ;
+    skos:prefLabel "Armor"@en ;
+    skos:notation "Armor" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Armor> .
+
+itemtype:Trinket a skos:Concept ;
+    skos:inScheme priory-ref:ItemTypeScheme ;
+    skos:topConceptOf priory-ref:ItemTypeScheme ;
+    skos:prefLabel "Trinket"@en ;
+    skos:altLabel "Jewelry"@en ;
+    skos:notation "Trinket" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Trinket> .
+
+itemtype:Back a skos:Concept ;
+    skos:inScheme priory-ref:ItemTypeScheme ;
+    skos:topConceptOf priory-ref:ItemTypeScheme ;
+    skos:prefLabel "Back Item"@en ;
+    skos:notation "Back" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Back_item> .
+
+itemtype:UpgradeComponent a skos:Concept ;
+    skos:inScheme priory-ref:ItemTypeScheme ;
+    skos:topConceptOf priory-ref:ItemTypeScheme ;
+    skos:prefLabel "Upgrade Component"@en ;
+    skos:notation "UpgradeComponent" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Upgrade_component> .
+
+itemtype:Consumable a skos:Concept ;
+    skos:inScheme priory-ref:ItemTypeScheme ;
+    skos:topConceptOf priory-ref:ItemTypeScheme ;
+    skos:prefLabel "Consumable"@en ;
+    skos:notation "Consumable" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Consumable> .
+
+itemtype:CraftingMaterial a skos:Concept ;
+    skos:inScheme priory-ref:ItemTypeScheme ;
+    skos:topConceptOf priory-ref:ItemTypeScheme ;
+    skos:prefLabel "Crafting Material"@en ;
+    skos:altLabel "Material"@en ;
+    skos:notation "CraftingMaterial" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Crafting_material> .
+
+itemtype:Container a skos:Concept ;
+    skos:inScheme priory-ref:ItemTypeScheme ;
+    skos:topConceptOf priory-ref:ItemTypeScheme ;
+    skos:prefLabel "Container"@en ;
+    skos:altLabel "Chest"@en, "Box"@en, "Bag of Loot"@en ;
+    skos:notation "Container" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Container> .
+
+itemtype:Bag a skos:Concept ;
+    skos:inScheme priory-ref:ItemTypeScheme ;
+    skos:topConceptOf priory-ref:ItemTypeScheme ;
+    skos:prefLabel "Inventory Bag"@en ;
+    skos:notation "Bag" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Bag> .
+
+itemtype:Trophy a skos:Concept ;
+    skos:inScheme priory-ref:ItemTypeScheme ;
+    skos:topConceptOf priory-ref:ItemTypeScheme ;
+    skos:prefLabel "Trophy / Collection Item"@en ;
+    skos:notation "Trophy" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Trophy> .
+
+itemtype:Gizmo a skos:Concept ;
+    skos:inScheme priory-ref:ItemTypeScheme ;
+    skos:topConceptOf priory-ref:ItemTypeScheme ;
+    skos:prefLabel "Gizmo / Novelty Tool"@en ;
+    skos:notation "Gizmo" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Gizmo> .

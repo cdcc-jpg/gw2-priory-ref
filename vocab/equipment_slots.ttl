@@ -1,0 +1,126 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix priory-ref: <https://priory.gw2/ref/> .
+@prefix slot: <https://priory.gw2/ref/slot/> .
+
+priory-ref:EquipmentSlotScheme a skos:ConceptScheme ;
+    skos:prefLabel "Guild Wars 2 Equipment Slot Scheme"@en ;
+    rdfs:comment "Controlled vocabulary of equipment gear slots and armor piece categories in Guild Wars 2."@en ;
+    skos:hasTopConcept slot:ArmorSlot, slot:TrinketSlot, slot:WeaponSlot, slot:RelicSlot .
+
+# --- Top Categories ---
+slot:ArmorSlot a skos:Concept ;
+    skos:inScheme priory-ref:EquipmentSlotScheme ;
+    skos:topConceptOf priory-ref:EquipmentSlotScheme ;
+    skos:prefLabel "Armor Equipment Slot"@en ;
+    skos:narrower slot:Helm, slot:Shoulders, slot:Chest, slot:Gloves, slot:Leggings, slot:Boots, slot:AquaBreather .
+
+slot:TrinketSlot a skos:Concept ;
+    skos:inScheme priory-ref:EquipmentSlotScheme ;
+    skos:topConceptOf priory-ref:EquipmentSlotScheme ;
+    skos:prefLabel "Trinket & Accessory Slot"@en ;
+    skos:narrower slot:Backpack, slot:Amulet, slot:Accessory, slot:Ring .
+
+slot:WeaponSlot a skos:Concept ;
+    skos:inScheme priory-ref:EquipmentSlotScheme ;
+    skos:topConceptOf priory-ref:EquipmentSlotScheme ;
+    skos:prefLabel "Weapon Slot"@en ;
+    skos:narrower slot:MainHandWeapon, slot:OffHandWeaponSlot, slot:TwoHandedWeaponSlot, slot:AquaticWeaponSlot .
+
+slot:RelicSlot a skos:Concept ;
+    skos:inScheme priory-ref:EquipmentSlotScheme ;
+    skos:topConceptOf priory-ref:EquipmentSlotScheme ;
+    skos:prefLabel "Relic Slot"@en ;
+    skos:definition "Dedicated equipment slot for combat Relics, introduced in Secrets of the Obscure."@en ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Relic> .
+
+# --- Armor Pieces ---
+slot:Helm a skos:Concept ;
+    skos:inScheme priory-ref:EquipmentSlotScheme ;
+    skos:broader slot:ArmorSlot ;
+    skos:prefLabel "Helm"@en ;
+    skos:altLabel "Head"@en, "Helmet"@en, "Mask"@en, "Cap"@en ;
+    skos:notation "Helm" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Helm> .
+
+slot:Shoulders a skos:Concept ;
+    skos:inScheme priory-ref:EquipmentSlotScheme ;
+    skos:broader slot:ArmorSlot ;
+    skos:prefLabel "Shoulders"@en ;
+    skos:altLabel "Shoulder"@en, "Pauldrons"@en, "Epaulets"@en, "Mantle"@en ;
+    skos:notation "Shoulders" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Shoulders> .
+
+slot:Chest a skos:Concept ;
+    skos:inScheme priory-ref:EquipmentSlotScheme ;
+    skos:broader slot:ArmorSlot ;
+    skos:prefLabel "Chest"@en ;
+    skos:altLabel "Coat"@en, "Chestpiece"@en, "Breastplate"@en, "Jerkin"@en, "Vestments"@en ;
+    skos:notation "Coat" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Chest_armor> .
+
+slot:Gloves a skos:Concept ;
+    skos:inScheme priory-ref:EquipmentSlotScheme ;
+    skos:broader slot:ArmorSlot ;
+    skos:prefLabel "Gloves"@en ;
+    skos:altLabel "Hands"@en, "Gauntlets"@en, "Bracers"@en, "Vambraces"@en ;
+    skos:notation "Gloves" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Gloves> .
+
+slot:Leggings a skos:Concept ;
+    skos:inScheme priory-ref:EquipmentSlotScheme ;
+    skos:broader slot:ArmorSlot ;
+    skos:prefLabel "Leggings"@en ;
+    skos:altLabel "Legs"@en, "Pants"@en, "Chausses"@en, "Breeches"@en ;
+    skos:notation "Leggings" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Leggings> .
+
+slot:Boots a skos:Concept ;
+    skos:inScheme priory-ref:EquipmentSlotScheme ;
+    skos:broader slot:ArmorSlot ;
+    skos:prefLabel "Boots"@en ;
+    skos:altLabel "Feet"@en, "Greaves"@en, "Footwear"@en, "Shoes"@en ;
+    skos:notation "Boots" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Boots> .
+
+slot:AquaBreather a skos:Concept ;
+    skos:inScheme priory-ref:EquipmentSlotScheme ;
+    skos:broader slot:ArmorSlot ;
+    skos:prefLabel "Aquatic Headgear / Breather"@en ;
+    skos:altLabel "Aqua Breather"@en, "Breather"@en ;
+    skos:notation "HelmAquatic" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Aquatic_headgear> .
+
+# --- Trinkets & Jewelry ---
+slot:Backpack a skos:Concept ;
+    skos:inScheme priory-ref:EquipmentSlotScheme ;
+    skos:broader slot:TrinketSlot ;
+    skos:prefLabel "Back Item / Backpack"@en ;
+    skos:altLabel "Back"@en, "Backpack"@en, "Cape"@en, "Glider Backpack"@en ;
+    skos:notation "Back" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Back_item> .
+
+slot:Amulet a skos:Concept ;
+    skos:inScheme priory-ref:EquipmentSlotScheme ;
+    skos:broader slot:TrinketSlot ;
+    skos:prefLabel "Amulet"@en ;
+    skos:altLabel "Necklace"@en, "Neck"@en, "Pendant"@en ;
+    skos:notation "Amulet" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Amulet> .
+
+slot:Accessory a skos:Concept ;
+    skos:inScheme priory-ref:EquipmentSlotScheme ;
+    skos:broader slot:TrinketSlot ;
+    skos:prefLabel "Accessory"@en ;
+    skos:altLabel "Earring"@en, "Trinket"@en ;
+    skos:notation "Accessory" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Accessory> .
+
+slot:Ring a skos:Concept ;
+    skos:inScheme priory-ref:EquipmentSlotScheme ;
+    skos:broader slot:TrinketSlot ;
+    skos:prefLabel "Ring"@en ;
+    skos:altLabel "Band"@en, "Finger"@en ;
+    skos:notation "Ring" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Ring> .

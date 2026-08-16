@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix priory-ref: <https://priory.gw2/ref/> .
+@prefix armor: <https://priory.gw2/ref/armor/> .
+
+priory-ref:ArmorWeightScheme a skos:ConceptScheme ;
+    skos:prefLabel "Guild Wars 2 Armor Weight Scheme"@en ;
+    rdfs:comment "Controlled vocabulary of armor weight classes in Guild Wars 2 (Heavy, Medium, Light)."@en ;
+    skos:hasTopConcept armor:HeavyArmor, armor:MediumArmor, armor:LightArmor, armor:Clothing .
+
+armor:HeavyArmor a skos:Concept ;
+    skos:inScheme priory-ref:ArmorWeightScheme ;
+    skos:topConceptOf priory-ref:ArmorWeightScheme ;
+    skos:prefLabel "Heavy Armor"@en ;
+    skos:altLabel "Heavy"@en, "Plate Armor"@en ;
+    skos:definition "Armor weight class worn by Warrior, Guardian, and Revenant professions. Crafted by Armorsmiths."@en ;
+    skos:notation "Heavy" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Heavy_armor> .
+
+armor:MediumArmor a skos:Concept ;
+    skos:inScheme priory-ref:ArmorWeightScheme ;
+    skos:topConceptOf priory-ref:ArmorWeightScheme ;
+    skos:prefLabel "Medium Armor"@en ;
+    skos:altLabel "Medium"@en, "Leather Armor"@en ;
+    skos:definition "Armor weight class worn by Ranger, Thief, and Engineer professions. Crafted by Leatherworkers."@en ;
+    skos:notation "Medium" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Medium_armor> .
+
+armor:LightArmor a skos:Concept ;
+    skos:inScheme priory-ref:ArmorWeightScheme ;
+    skos:topConceptOf priory-ref:ArmorWeightScheme ;
+    skos:prefLabel "Light Armor"@en ;
+    skos:altLabel "Light"@en, "Cloth Armor"@en, "Scholar Armor"@en ;
+    skos:definition "Armor weight class worn by Elementalist, Necromancer, and Mesmer professions. Crafted by Tailors."@en ;
+    skos:notation "Light" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Light_armor> .
+
+armor:Clothing a skos:Concept ;
+    skos:inScheme priory-ref:ArmorWeightScheme ;
+    skos:topConceptOf priory-ref:ArmorWeightScheme ;
+    skos:prefLabel "Clothing / Universal"@en ;
+    skos:altLabel "Town Clothes"@en, "Universal Armor"@en ;
+    skos:definition "Universal wearable armor pieces or cosmetic apparel worn regardless of profession."@en ;
+    skos:notation "Clothing" ;
+    rdfs:seeAlso <https://wiki.guildwars2.com/wiki/Armor> .
