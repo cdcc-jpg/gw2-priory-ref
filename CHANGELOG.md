@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Added comprehensive cross-repository architectural reference in [`docs/neuro_symbolic_architecture_and_pipeline.md`](./docs/neuro_symbolic_architecture_and_pipeline.md) detailing how SKOS concept schemes interface with the Project Priory neuro-symbolic reasoning engine.
+- Integrated architecture interaction diagram and documentation link into [`README.md`](./README.md).
 - Initialized repository with AGENTS.md, README.md, and changelog.
 - Created SKOS Concept Schemes:
   - `vocab/rarities.ttl`: Item rarities (Junk to Legendary) with numerical tier ranks and color codes.

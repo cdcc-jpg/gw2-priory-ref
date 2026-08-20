@@ -23,3 +23,28 @@ This repository serves as the single source of truth for classifications, stable
 * **Base Reference Namespace:** `@prefix priory-ref: <https://priory.gw2/ref/> .`
 * **Schema Definition Namespace:** `@prefix priory: <https://priory.gw2/def/> .`
 * **W3C SKOS:** `@prefix skos: <http://www.w3.org/2004/02/skos/core#> .`
+
+---
+
+## 🏛️ Integration with Project Priory Neuro-Symbolic Engine
+
+The vocabularies in this repository serve as the semantic foundation for the **Neuro-Symbolic Sandwich** in [`gw2-priory-def`](https://github.com/cdcc-jpg/gw2-priory-def).
+
+For the full technical reference and sequence diagrams, see:
+* [📊 **Pipeline & Semantic Touchpoints Reference**](./docs/neuro_symbolic_architecture_and_pipeline.md)
+
+```mermaid
+flowchart LR
+    subgraph RefRepo["gw2-priory-ref (Layer 1: SKOS Vocabularies)"]
+        R1["vocab/weapon_types.ttl\n(Taxonomic Subsumption)"]
+        R2["vocab/rarities.ttl\n(Tier Levels & Codes)"]
+        R3["vocab/currencies.ttl\n(Wallet & Token Schemes)"]
+    end
+
+    subgraph DefEngine["gw2-priory-def (Layer 2 & 3: Engine & LLM)"]
+        Intent["Top LLM Intent Parser"] --> SQS["SemanticQueryService\n(SPARQL Entity & Taxonomy Resolution)"]
+        SQS <--> RefRepo
+        SQS --> Diff["AccountDiffEngine & PathSolver"]
+        Diff --> BotLLM["Bottom LLM Guide Generator"]
+    end
+```
