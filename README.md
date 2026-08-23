@@ -2,6 +2,12 @@
 
 Authoritative **W3C SKOS Controlled Vocabularies, Taxonomies, and Concept Schemes** for *Guild Wars 2* semantic tooling.
 
+> **Project Priory** is a **Neuro-Symbolic Domain Semantic Layer and Knowledge Graph Engine** for *Guild Wars 2*.
+>
+> * **[`gw2-priory-ref`](https://github.com/cdcc-jpg/gw2-priory-ref)**: The **Controlled Vocabulary & Reference Taxonomy Layer (SKOS)**, managing standardized concept schemes, hierarchies, and multilingual synonyms.
+> * **[`gw2-priory-def`](https://github.com/cdcc-jpg/gw2-priory-def)**: The **Domain Ontology & Schema Layer (OWL 2 DL TBox + SHACL)**, defining formal entity classes, dependency relations, and structural integrity rules.
+> * **The Engine**: A **Deterministic Graph Solver & Neuro-Symbolic Agent Pipeline**, using SPARQL and graph traversal to ground LLM reasoning in verified semantic facts.
+
 This repository serves as the single source of truth for classifications, stable URIs, and identity alignments across Project Priory.
 
 ---
