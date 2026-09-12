@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **Weapon Damage Types Taxonomy in `vocab/damage_types.ttl`:** Formalized `priory-ref:DamageTypeScheme` SKOS Concept Scheme modeling strike damage types (`damagetype:Physical`, `damagetype:Fire`, `damagetype:Ice`, `damagetype:Lightning`, `damagetype:Choking`) with notations and definitions. Linked to `priory:damageType` via `priory:associatedScheme`.
 - **Multi-Agent Orchestration & Subagent Delegation Protocol in `AGENTS.md`:** Formalized the architecture rule instructing the primary agent to operate as Lead Architect/Orchestrator, decomposing complex taxonomy and vocab workstreams across specialized subagents.
 - **Mount & Mobility Taxonomy in `vocab/mounts.ttl`:** Formalized `mount:MountScheme` SKOS Concept Scheme modeling all 10 mounts (Raptor, Springer, Skimmer, Jackal, Griffon, Roller Beetle, Skyscale, Warclaw, Siege Turtle, Jade Bot) with mobility profiles, traversal definitions, and expansion requirements.
 - **Core Tyria Regions & Exploration Zones Taxonomy in `vocab/core_tyria_regions.ttl`:** Formalized `region:CoreTyriaRegionScheme` SKOS Concept Scheme covering all 5 Core Tyria regions (Kryta, Ascalon, Shiverpeaks, Maguuma Jungle, Ruins of Orr) and 29 exploration zones with level requirements, difficulty ratings, starting waypoints, and mount recommendations.

@@ -1,0 +1,52 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix priory: <https://priory.gw2/def/> .
+@prefix priory-ref: <https://priory.gw2/ref/> .
+@prefix damagetype: <https://priory.gw2/ref/damagetype/> .
+
+# ==============================================================================
+# Controlled SKOS Vocabulary: Weapon Damage Types
+# ==============================================================================
+
+priory-ref:DamageTypeScheme a skos:ConceptScheme ;
+    skos:prefLabel "Guild Wars 2 Weapon Damage Type Scheme"@en ;
+    rdfs:comment "Controlled vocabulary of weapon strike damage types in Guild Wars 2 (Physical, Fire, Ice, Lightning, Choking)."@en ;
+    skos:hasTopConcept damagetype:Physical, damagetype:Fire, damagetype:Ice, damagetype:Lightning, damagetype:Choking .
+
+damagetype:Physical a skos:Concept ;
+    skos:inScheme priory-ref:DamageTypeScheme ;
+    skos:topConceptOf priory-ref:DamageTypeScheme ;
+    skos:prefLabel "Physical"@en ;
+    skos:notation "Physical" ;
+    rdfs:comment "Standard kinetic strike weapon damage."@en .
+
+damagetype:Fire a skos:Concept ;
+    skos:inScheme priory-ref:DamageTypeScheme ;
+    skos:topConceptOf priory-ref:DamageTypeScheme ;
+    skos:prefLabel "Fire"@en ;
+    skos:notation "Fire" ;
+    rdfs:comment "Incendiary / burning weapon strike damage."@en .
+
+damagetype:Ice a skos:Concept ;
+    skos:inScheme priory-ref:DamageTypeScheme ;
+    skos:topConceptOf priory-ref:DamageTypeScheme ;
+    skos:prefLabel "Ice"@en ;
+    skos:notation "Ice" ;
+    rdfs:comment "Cryo / chilling weapon strike damage."@en .
+
+damagetype:Lightning a skos:Concept ;
+    skos:inScheme priory-ref:DamageTypeScheme ;
+    skos:topConceptOf priory-ref:DamageTypeScheme ;
+    skos:prefLabel "Lightning"@en ;
+    skos:notation "Lightning" ;
+    rdfs:comment "Electrodynamic weapon strike damage."@en .
+
+damagetype:Choking a skos:Concept ;
+    skos:inScheme priory-ref:DamageTypeScheme ;
+    skos:topConceptOf priory-ref:DamageTypeScheme ;
+    skos:prefLabel "Choking"@en ;
+    skos:notation "Choking" ;
+    rdfs:comment "Asphyxiating / toxic weapon strike damage."@en .
+
+priory:damageType priory:associatedScheme priory-ref:DamageTypeScheme .
